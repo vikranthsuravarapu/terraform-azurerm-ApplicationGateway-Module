@@ -1,3 +1,11 @@
+provider "azurerm" {
+  features {}
+  subscription_id = var.subscription_id
+  client_id       = var.client_id
+  client_secret   = var.client_secret
+  tenant_id       = var.tenant_id
+}
+
 resource "azurerm_public_ip" "appgw_pip" {
   name                = var.public_ip_name
   location            = var.location
