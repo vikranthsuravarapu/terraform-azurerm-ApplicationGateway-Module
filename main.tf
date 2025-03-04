@@ -65,6 +65,7 @@ resource "azurerm_application_gateway" "appgw" {
     http_listener_name         = "httpListener"
     backend_address_pool_name  = "appGatewayBackendPool"
     backend_http_settings_name = "httpSettings"
+    priority                   = 100  # Set priority for the rule
   }
 
   tags = var.tags
